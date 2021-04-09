@@ -9,7 +9,12 @@ import './App.css'
 function App() {
     return (
         <div className="App">
-            
+            <Route component={Login}/>
+            <Route component={Profile}/>
+            <Route path="/read/:title" component={ReadBook}/>
+            <Route path="/results" component={Results}/>
+            <Route path="/" component={Search}/>
+            <Route component={Signup}/>
         </div>
     )
 }
