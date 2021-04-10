@@ -36,3 +36,14 @@
         transform: rotate(360deg);
     }
 }
+body{
+    background-color: #402319;
+}
+
+*{
+    border: 1px solid red;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 60;
+    font-weight: bold;
+    color: whitesmoke;
+}

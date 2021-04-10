@@ -1,3 +1,5 @@
+import { Component } from "react";
+
 export class ReadBook extends Component {
     constructor(props) {
         super(props)
@@ -10,3 +12,4 @@ export class ReadBook extends Component {
         )
     }
 }
+export default ReadBook;
