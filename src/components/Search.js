@@ -8,17 +8,18 @@ function Search() {
     const [results, setResults] = useState([])
 
     const handleQuery = (e) => {
-        const author = e.target.value
-        const lowerAuthor = author.toLowerCase()
-        const properAuthor = lowerAuthor[0].toUpperCase() + lowerAuthor.substring(1)
-        setQuery(properAuthor)
+        setQuery(e.target.value)
     }
 
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {
+            const author = query
+            const lowerAuthor = author.toLowerCase()
+            const properAuthor = lowerAuthor[0].toUpperCase() + lowerAuthor.substring(1)
+            const finalAuthor = properAuthor.split(' ')[0]
             const collection = await axios.get(
-                REACT_APP_SERVER_URL + '/books/' + query
+                REACT_APP_SERVER_URL + '/books/' + finalAuthor
             )
             const collectionArray = collection.data.books.map((book, index) => {
                 return (
