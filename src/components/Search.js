@@ -1,17 +1,21 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import axios from 'axios'
 
 const REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL
 
 function Search() {
+    const [query, setQuery] = useState('')
     const [results, setResults] = useState([])
 
-    const author = "Plato"
+    const handleQuery = (e) => {
+        setQuery(e.target.value)
+    }
 
-    async function getResults() {
+    const handleSubmit = async (e) => {
+        e.preventDefault()
         try {
             const collection = await axios.get(
-                REACT_APP_SERVER_URL + '/books/' + author
+                REACT_APP_SERVER_URL + '/books/' + query
             )
             const collectionArray = collection.data.books.map((book, index) => {
                 return (
@@ -26,18 +30,24 @@ function Search() {
             })
             setResults(collectionArray)
         } catch (error) {
-            alert('FAILED')
+            alert(error)
         }
     }
-    
-    useEffect(() => {
-        getResults()
-    }, [])
 
     return (
         <div>
             <h2>Search</h2>
             <p>Find a book!</p>
+            <form onSubmit={handleSubmit}>
+                <label htmlFor="author">Author</label>
+                <input
+                    type="text"
+                    name="author"
+                    value={query}
+                    onChange={handleQuery}
+                />
+                <button type="submit">Submit</button>
+            </form>
             {results}
         </div>
     )
