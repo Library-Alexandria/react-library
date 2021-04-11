@@ -1,5 +1,5 @@
 # Library of Alexandria Frontend
-Frontend repository for the Library of Alexandria
+Frontend repository for the Library of Alexandria.
 
 ## Designs
 
