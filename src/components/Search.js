@@ -8,7 +8,10 @@ function Search() {
     const [results, setResults] = useState([])
 
     const handleQuery = (e) => {
-        setQuery(e.target.value)
+        const author = e.target.value
+        const lowerAuthor = author.toLowerCase()
+        const properAuthor = lowerAuthor[0].toUpperCase() + lowerAuthor.substring(1)
+        setQuery(properAuthor)
     }
 
     const handleSubmit = async (e) => {
