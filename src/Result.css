@@ -1,0 +1,25 @@
+.flex-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 0%;
+}
+.column img{
+    height: 100%;
+    width: 150%;
+}
+
+.scroll img{
+    /* padding-top: 5%; */
+    width: 100%;
+    /* position: absolute; */
+    left: 0px;
+    top: 0px;
+    z-index: auto;
+}
+.column{
+    flex-basis: 10%;
+    padding-right: 3%;
+}
+.scroll{
+    flex-basis: 80%;
+}
