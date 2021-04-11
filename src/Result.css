@@ -9,17 +9,15 @@
 }
 
 .scroll img{
-    /* padding-top: 5%; */
     width: 100%;
-    /* position: absolute; */
     left: 0px;
     top: 0px;
     z-index: auto;
 }
 .column{
     flex-basis: 10%;
-    padding-right: 3%;
+    padding-right: 5%;
 }
 .scroll{
-    flex-basis: 80%;
+    flex-basis: 70%;
 }

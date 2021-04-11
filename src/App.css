@@ -41,12 +41,52 @@ body{
 }
 
 *{
-    /* border: 1px solid red; */
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 60;
     font-weight: bold;
     color: whitesmoke;
 }
+
 .result{
     z-index: auto;
+}
+
+.flex-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 0%;
+}
+
+.column img{
+    height: 100%;
+    width: 150%;
+}
+
+.scroll img{
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    z-index: 0;
+}
+
+.column{
+    flex-basis: 10%;
+    padding-right: 5%;
+}
+
+.scroll{
+    flex-basis: 70%;
+    position: relative;
+}
+
+.main {
+    position: absolute;
+    top: 50%;  
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: black;
+}
+
+h2, p {
+    color: black;
 }

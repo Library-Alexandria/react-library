@@ -1,24 +1,44 @@
-import React, { useEffect, useState } from "react";
-import { Route, Switch, Redirect } from "react-router-dom";
-import { Component } from "react";
+import { Route } from "react-router-dom"
 
+import Home from './components/Home'
+import Signup from './components/Signup'
 import Login from './components/Login'
 import Profile from './components/Profile'
-import ReadBook from './components/ReadBook'
-import Results from './components/Results'
 import Search from './components/Search'
-import Signup from './components/Signup'
+import Results from './components/Results'
+import ReadBook from './components/ReadBook'
 import './App.css'
 
 function App() {
     return (
         <div className="App">
-            <Route component={Login}/>
-            <Route component={Profile}/>
-            <Route path="/read/:title" component={ReadBook}/>
-            <Route path="/results" component={Results}/>
-            <Route path="/" component={Search}/>
-            <Route component={Signup}/>
+            <div className="header">
+                <h1>HELLO ALEXANDRIA</h1>
+            </div>
+
+            <div className="flex-container">
+                <div className="column">
+                    <img className="pillar" src="https://res.cloudinary.com/carolinaurrea/image/upload/v1618028409/pillars_kl2tke.png" alt="pillar"></img>
+                </div>
+
+                <div className="scroll">
+                    <img className="scroll" src="https://res.cloudinary.com/carolinaurrea/image/upload/v1618070627/scrollonce_hpjsq7.gif" alt="scroll"/>
+
+                    <div className="main">
+                        <Route exact path="/" component={Home} />
+                        <Route path="/signup" component={Signup} />
+                        <Route path="/login" component={Login} />
+                        <Route path="/profile" component={Profile} />
+                        <Route path="/search" component={Search} />
+                        <Route path="/results" component={Results} />
+                        <Route path="/read/:title" component={ReadBook} />
+                    </div>
+                </div>
+
+                <div className="column">
+                    <img className="pillar" src="https://res.cloudinary.com/carolinaurrea/image/upload/v1618028409/pillars_kl2tke.png" alt="pillar"></img>
+                </div>
+            </div>
         </div>
     )
 }

@@ -1,15 +1,10 @@
-import { Component } from "react";
-
-export class Search extends Component {
-    constructor(props) {
-        super(props)
-
-    }
-    render() {
-        return(
-            <>
-            </>
-        )
-    }
+function Search() {
+    return (
+        <div>
+            <h2>Search</h2>
+            <p>Find a book!</p>
+        </div>
+    )
 }
-export default Search;
+
+export default Search

@@ -1,15 +1,10 @@
-import { Component } from "react";
-
-export class ReadBook extends Component {
-    constructor(props) {
-        super(props)
-
-    }
-    render() {
-        return(
-            <>
-            </>
-        )
-    }
+function ReadBook() {
+    return (
+        <div>
+            <h2>Read This Book</h2>
+            <p>Read the full text of this book.</p>
+        </div>
+    )
 }
-export default ReadBook;
+
+export default ReadBook
