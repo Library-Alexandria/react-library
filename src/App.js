@@ -13,7 +13,7 @@ function App() {
     return (
         <div className="App">
             <div className="header">
-                <h1>HELLO ALEXANDRIA</h1>
+                <h1>LIBRARY OF ALEXANDRIA</h1>
             </div>
 
             <div className="flex-container">
@@ -31,7 +31,7 @@ function App() {
                         <Route path="/profile" component={Profile} />
                         <Route path="/search" component={Search} />
                         <Route path="/results" component={Results} />
-                        <Route path="/read/:title" component={ReadBook} />
+                        <Route path="/read" component={ReadBook} />
                     </div>
                 </div>
 

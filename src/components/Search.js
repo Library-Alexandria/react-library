@@ -19,7 +19,7 @@ function Search() {
             const properAuthor = lowerAuthor[0].toUpperCase() + lowerAuthor.substring(1)
             const finalAuthor = properAuthor.split(' ')[0]
             const collection = await axios.get(
-                REACT_APP_SERVER_URL + '/books/' + finalAuthor
+                REACT_APP_SERVER_URL + '/books/search/' + finalAuthor
             )
             const collectionArray = collection.data.books.map((book, index) => {
                 return (
