@@ -14,8 +14,9 @@ function Results() {
                 </div>
                 <div className="scroll">
                     <img className="scroll" src="https://res.cloudinary.com/carolinaurrea/image/upload/v1618070627/scrollonce_hpjsq7.gif" alt="scroll"/>
-                        <div><h1 className="result">Hello</h1>
-                        </div>
+                    <h1 className="result">TITLE</h1>
+                    <h1 className="author">AUTHOR</h1>
+
                 </div>
                 <div className="column">
                     <img className="pillar" src="https://res.cloudinary.com/carolinaurrea/image/upload/v1618028409/pillars_kl2tke.png" alt="pillar"></img>

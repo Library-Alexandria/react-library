@@ -48,5 +48,18 @@ body{
     color: whitesmoke;
 }
 .result{
-    z-index: auto;
+     position: absolute;
+  z-index: 8; /* put .gold-box above .green-box and .dashed-box */
+  /* background:; */
+  width: 60%;
+  left: 20%;
+  top: 8em;
+}
+.author{
+    position: absolute;
+    z-index: 8; /* put .gold-box above .green-box and .dashed-box */
+    /* background:; */
+    width: 60%;
+    left: 20%;
+    top: 9em;
 }
