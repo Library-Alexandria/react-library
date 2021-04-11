@@ -1,15 +1,10 @@
-import { Component } from "react";
-
-export class Login extends Component {
-    constructor(props) {
-        super(props)
-
-    }
-    render() {
-        return(
-            <>
-            </>
-        )
-    }
+function Login() {
+    return (
+        <div>
+            <h2>Log In</h2>
+            <p>Submit your name, city, and watchword to gain access!</p>
+        </div>
+    )
 }
-export default Login;
+
+export default Login
