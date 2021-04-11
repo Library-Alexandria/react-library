@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import axios from 'axios'
 
 const REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL
 
 function ReadBook() {
+    const location = useLocation()
+    const bookId = location.state.book.id
     const [text, setText] = useState('')
-
-    const bookId = 1
 
     async function getText() {
         try {
